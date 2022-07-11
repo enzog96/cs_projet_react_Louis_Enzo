@@ -1,0 +1,32 @@
+.comingsoon {
+    width: 60%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+    gap: 10vh;
+
+}
+
+.coming-img {
+    width: 40vh;
+    height: 40vh;
+    position: absolute;
+    
+}
+
+.coming-img img {
+    width: 100%;
+}
+
+.coming-text button {
+    position: relative;
+    background-color: #fff;
+    border: none;
+    width: 25vh;
+    height: 5vh;
+    bottom: -30vh;
+    left: 7vh;
+    cursor: pointer;
+}
