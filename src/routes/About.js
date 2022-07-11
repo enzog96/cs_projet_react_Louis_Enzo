@@ -5,6 +5,8 @@ import Textaboutus from '../components/about-us/text-aboutus/text-aboutus';
 import Imgaboutus from '../components/about-us/img-aboutus/img-aboutus';
 
 
+
+
 export default function About() {
     return( 
         <div>
