@@ -1,0 +1,15 @@
+.aboutCol{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5vh;
+}
+
+.aboutText{
+    padding: 3vh;
+}
+
+.quote{
+    border-left: 2px solid lightgrey;
+    padding-left: 5vh;
+    margin-top: 5vh;
+}
