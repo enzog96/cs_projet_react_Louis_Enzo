@@ -1,0 +1,40 @@
+.footer {
+    width: 100%;
+    margin: auto;
+    margin-top: 5vh;
+    
+}
+
+.touch {
+    text-align: center;
+}
+
+
+.footer .container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 50% 25% 25%);
+}
+
+.footer .container .col {
+    display: grid;
+    justify-content: center;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.fa {
+    margin: 2vh;
+}
+
+
+
+
+
