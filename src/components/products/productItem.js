@@ -26,6 +26,7 @@ export default class ProductItem extends React.Component {
                 <div key={product.id}>
                 <img className="image-product" src={product.img} alt={product.name}></img>
                 <p>{product.name}</p>
+                <p>{product.price}$</p>
                 </div>
                 ))}
             </div>

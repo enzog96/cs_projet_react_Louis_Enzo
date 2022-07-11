@@ -2,7 +2,8 @@
     display: grid;
     width: 60%;
     gap: 2%;
-    grid-template-columns: 1fr 1fr 1fr;   
+    grid-template-columns: 1fr 1fr 1fr;  
+    margin: auto; 
 }
 
 .image-product{
