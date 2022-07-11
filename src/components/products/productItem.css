@@ -1,0 +1,10 @@
+.product-gallery{
+    display: grid;
+    width: 60%;
+    gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr;   
+}
+
+.image-product{
+    width: 100%;
+}

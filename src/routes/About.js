@@ -13,8 +13,8 @@ export default function About() {
             <Navbar/>
             <Banner title="About" />
         <div className="aboutCol">
-            <Textaboutus/>
             <Imgaboutus/>
+            <Textaboutus/>
         </div>
         </div>
     )
