@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from "react-router-dom"
 import './Navbar.css'
 import Logo from '../../assets/logo.png'
 import { BsBag} from 'react-icons/bs'
 import {AiOutlineHeart} from 'react-icons/ai'
+import {FaHamburger, FaBars, FaTimes} from 'react-icons/fa'
 
 const Navbar = () => {
 
+    const [nav, setNav] = useState(false)
+    const handleNav = () => setNav(!nav)
+
 
     return (
-        <div className='nav'>
+        <div className='navbar'>
             <Link to='/'><img src={Logo} alt="" /></Link>
-            <ul className='nav-menu'>
+            <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
                 <li>
                     <Link to='/'>Home</Link>
                 </li>
@@ -33,6 +37,9 @@ const Navbar = () => {
                 <a href="/Basket">
                     <BsBag className='logo2' size={25}/>
                 </a>  
+            </div>
+            <div className='hamburger' onClick={handleNav}>
+                        {nav ? (<FaTimes size={20} style={{color: '#ffffff'}}/>) : (<FaBars size={20}/>)}
             </div>
         </div>
     );

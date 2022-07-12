@@ -5,9 +5,6 @@ import './Video.css'
 
 const Video = () => {
 
-    
-      
-
     return (
         <div className='video-div'>
                 <video autoPlay={true} loop={true} className='video' src={Videob}></video>
