@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Link} from "react-router-dom"
 import './Navbar.css'
 import Logo from '../../assets/logo.png'
@@ -6,6 +6,8 @@ import { BsBag} from 'react-icons/bs'
 import {AiOutlineHeart} from 'react-icons/ai'
 
 const Navbar = () => {
+
+
     return (
         <div className='nav'>
             <Link to='/'><img src={Logo} alt="" /></Link>
