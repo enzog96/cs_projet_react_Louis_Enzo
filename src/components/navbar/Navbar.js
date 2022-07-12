@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import './Navbar.css'
 import Logo from '../../assets/logo.png'
 import { BsBag} from 'react-icons/bs'
 import {AiOutlineHeart} from 'react-icons/ai'
 import { FaBars, FaTimes} from 'react-icons/fa'
+
 
 const Navbar = () => {
 
@@ -14,29 +15,29 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <Link to='/'><img src={Logo} alt="" /></Link>
+            <NavLink to='/'><img src={Logo} alt="" /></NavLink>
             <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
                 <li>
-                    <Link to='/'>Home</Link>
+                    <NavLink to='/' style={({ isActive }) => (isActive ? {color: 'red'}  : {color: 'black'} )}>Home</NavLink>
                 </li>
                 <li>
-                    <Link to='/product'>Product</Link>
+                    <NavLink to='/product' style={({ isActive }) => (isActive ? {color: 'red'}  : {color: 'black'} )}>Product</NavLink>
                 </li>
                 <li>
-                    <Link to='/about'>About</Link>
+                    <NavLink to='/about' style={({ isActive }) => (isActive ? {color: 'red'}  : {color: 'black'} )}>About</NavLink>
                 </li>
                 <li>
-                    <Link to='/contact'>Contact</Link>
+                    <NavLink to='/contact' style={({ isActive }) => (isActive ? {color: 'red'}  : {color: 'black'} )}>Contact</NavLink>
                 </li>
             </ul>
             <div className='logo'>
-                <a href="/Heart">
+                <NavLink to='/heart'>
                     <AiOutlineHeart className='logo1' size={20} />
-                </a>
+                </NavLink>
                 <p>|</p>
-                <a href="/Basket">
+                <NavLink to='/basket'>
                     <BsBag className='logo2' size={25}/>
-                </a>  
+                </NavLink> 
             </div>
             <div className='hamburger' onClick={handleNav}>
                         {nav ? (<FaTimes size={20} style={{color: '#ffffff'}}/>) : (<FaBars size={20}/>)}
