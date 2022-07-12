@@ -4,20 +4,19 @@ import "./productItem.css";
 
 
 const products = [
-    {id: 1, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: true, newprice: 45.00}, 
-    {id: 2, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: ""},
-    {id: 3, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: ""}, 
-    {id: 4, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: ""},
-    {id: 5, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: ""}, 
-    {id: 6, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: ""},
-    {id: 7, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: ""}, 
-    {id: 8, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: ""},
-    {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: ""},
+    {id: 1, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: true, newprice: 45.00, category: "Kids"}, 
+    {id: 2, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Accessories"},
+    {id: 3, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Accessories"}, 
+    {id: 4, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Women"},
+    {id: 5, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Accessories"}, 
+    {id: 6, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Women"},
+    {id: 7, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids"}, 
+    {id: 8, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids"},
+    {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids"},
 ]
 
-export default class ProductItem extends React.Component {
-
-    render() {
+export default function ProductItem (){
+    
         return(
             <div>
                 <p className="number-products">Number of products : {products.length}</p>
@@ -47,5 +46,4 @@ export default class ProductItem extends React.Component {
             </div>
             </div>
         )
-    }
 }
