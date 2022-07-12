@@ -3,7 +3,7 @@ import "./productfilters.css"
 
 export default function ProductFilters(){
     return(
-        <div>
+        <div className='productfilters'>
             <h2>Categories</h2>
             <ul>
                 <li>All</li>

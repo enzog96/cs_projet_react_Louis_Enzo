@@ -13,9 +13,9 @@ export default function Product() {
         <Navbar/>
         <Banner title="Products" subtitle="New Arrivals Women Collection" />
     <div className='product-gallery-container'>
-        <div><ProductCount/></div>
         <ProductFilters/>
-        <ProductItem/>
+        <div className="col-2">
+        <ProductItem/></div>
         </div>
     </div>
 )
