@@ -16,8 +16,8 @@ export default function Contact() {
         <Minimap/>
         <Form/>
     </div>
-    <Footer/>
     </div>
+    <Footer/>
     </div>
 )
 }

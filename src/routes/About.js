@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Banner from '../components/banner/Banner';
 import Textaboutus from '../components/about-us/text-aboutus/text-aboutus';
@@ -10,7 +10,6 @@ import '../index.css'
 
 
 export default function About() {
-
 
     return( 
         <div>
