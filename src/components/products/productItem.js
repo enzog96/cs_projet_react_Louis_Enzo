@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import test from "../../assets/fashion-recent-products-06-1.jpg";
 import "./productItem.css";
 
@@ -16,7 +16,6 @@ const products = [
 ]
 
 export default function ProductItem (){
-    
         return(
             <div>
                 <p className="number-products">Number of products : {products.length}</p>
@@ -28,7 +27,8 @@ export default function ProductItem (){
                     backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat', 
-                    height: "500px", maxWidth: "400px"}}>
+                    height: "500px", maxWidth: "400px", 
+                    }}>
                         {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
                         {product.new===true?<div className='new-green-pill'>New</div>: ""}
                     </div>
@@ -36,8 +36,8 @@ export default function ProductItem (){
                 <div>
                     <p>{product.name}</p>
                     <div className='product-prices-flex-container'>
-                        <p>{product.sale === true?<div className='onsale-price-line-through'>{product.price}$</div> : product.price + "$"}</p>
-                        <p>{product.newprice !== ""?<div className='newprice'>{product.newprice}$</div>: ""}</p>
+                        <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
+                        <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
                     </div>
                 </div>
                 </div>

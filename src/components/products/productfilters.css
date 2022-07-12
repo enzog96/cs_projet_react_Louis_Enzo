@@ -1,5 +1,6 @@
 .productfilters {
     width: 30%;
+    cursor: pointer;
 }
 
 .productfilters>h2 {

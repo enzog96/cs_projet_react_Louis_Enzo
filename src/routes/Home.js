@@ -5,6 +5,7 @@ import Navbar from '../components/navbar/Navbar';
 import OurProduct from '../components/ourproduct/OurProduct';
 import Video from '../components/video/Video';
 import Footer from '../components/footer/Footer';
+import Scrollup from '../components/scrollup/Scrollup';
 
 
 
@@ -16,7 +17,8 @@ const Home = () => {
             <ComingSoon/>
             <OurProduct/>
             <Video/>
-            <Footer/> 
+            <Footer/>
+            <Scrollup/>
         </div>
     );
 };
