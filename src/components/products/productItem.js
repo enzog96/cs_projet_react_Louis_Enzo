@@ -21,13 +21,25 @@ export default class ProductItem extends React.Component {
     }
     render() {
         return(
+            <div>
+                <p>Number of products : {products.length}</p>
             <div className="product-gallery">
             {products.map((product) => (
-                <div key={product.id}>
-                <img className="image-product" src={product.img} alt={product.name}></img>
-                <p>{product.name}</p>
+                <>
+                <div>
+                <div key={product.id} style={{
+                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat', 
+                    height: "500px", maxWidth: "400px"}}></div>
+                <div>
+                    <p>{product.name}</p>
+                    <p>{product.price}$</p>
                 </div>
+                </div>
+                </>
                 ))}
+            </div>
             </div>
         )
     }

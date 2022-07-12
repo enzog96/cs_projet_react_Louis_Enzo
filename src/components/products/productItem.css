@@ -1,8 +1,21 @@
+.col-2{
+    width: 100%;
+}
+
+.product-gallery-container{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 90%;
+}
+
 .product-gallery{
+    margin-right: auto;
     display: grid;
-    width: 60%;
     gap: 2%;
-    grid-template-columns: 1fr 1fr 1fr;   
+    grid-template-columns: 1fr 1fr 1fr;  
+    margin: auto; 
 }
 
 .image-product{
