@@ -5,15 +5,17 @@ import Product from './routes/Product'
 import About from './routes/About'
 import Contact from './routes/Contact'
 
+
 function App() {
   return (
     <>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/product" element={<Product/>}/>
-      <Route path="/about" element={<About/>}/>
+      <Route path="/about"  element={<About/>} />
       <Route path="/contact" element={<Contact/>}/>
-    </Routes></>
+    </Routes>
+    </>
   );
 }
 

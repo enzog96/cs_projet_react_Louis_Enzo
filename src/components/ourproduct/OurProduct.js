@@ -10,10 +10,10 @@ const OurProduct = () => {
       <h2>OUR PRODUCTS</h2>
       <Tabs>
         <TabList className='main-tab'>
-          <Tab>Best Seller</Tab>
-          <Tab>New</Tab>
-          <Tab>Sale</Tab>
-          <Tab>Old</Tab>
+          <Tab className='popopo'>Best Seller</Tab>
+          <Tab className='popopo' >New</Tab>
+          <Tab className='popopo' >Sale</Tab>
+          <Tab className='popopo' >Old</Tab>
         </TabList>
 
         <TabPanel>

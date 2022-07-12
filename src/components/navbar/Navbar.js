@@ -24,9 +24,13 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className='logo'>
-                <AiOutlineHeart className='logo1' size={20}/>
+                <a href="/Heart">
+                    <AiOutlineHeart className='logo1' size={20} />
+                </a>
                 <p>|</p>
-                <BsBag className='logo2' size={25}/>
+                <a href="/Basket">
+                    <BsBag className='logo2' size={25}/>
+                </a>  
             </div>
         </div>
     );
