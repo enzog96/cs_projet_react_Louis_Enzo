@@ -1,5 +1,6 @@
 import React from 'react';
 import "./productfilters.css"
+import {FiSearch} from "react-icons/fi"
 
 export default function ProductFilters(){
     return(
@@ -13,7 +14,10 @@ export default function ProductFilters(){
                 <li>Accessories</li>
             </ul>
             <h2>Filter</h2>
-            <input placeholder="Search Products..." type="text"></input>
+            <div class="form-group fg--search">
+            <input type="text" class="input" placeholder="Search products..."></input>
+            <button type="submit"><FiSearch/></button>
+            </div>
         </div>
     )
 }
