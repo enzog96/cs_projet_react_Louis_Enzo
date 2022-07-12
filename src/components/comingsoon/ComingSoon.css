@@ -1,32 +1,67 @@
 .comingsoon {
-    width: 60%;
-    height: 50vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    margin: 0 auto;
-    gap: 10vh;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vh;
+    margin: auto;
+    margin-bottom: 10vh;
+}
 
+.coming1 {
+    background-image: url('../../assets/coming1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.coming {
+    width: 40vh;
+    height: 40vh;
+}
+
+.coming button {
+    position: relative;
+    top: 80%;
+    left: 25%;
+    width: 20vh;
+    height: 5vh;
+    border: none;
+    background-color: #fff;
+}
+
+.coming2 {
+    background-image: url('../../assets/coming2.png');
+    background-size: cover;
+    background-position: center;
+}
+.coming3 {
+    background-image: url('../../assets/coming3.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .coming-img {
     width: 40vh;
-    height: 40vh;
-    position: absolute;
-    
+    height: 40vh;  
 }
 
 .coming-img img {
     width: 100%;
 }
 
-.coming-text button {
-    position: relative;
-    background-color: #fff;
-    border: none;
-    width: 25vh;
-    height: 5vh;
-    bottom: -30vh;
-    left: 7vh;
-    cursor: pointer;
+
+@media screen and (max-width: 740px) {
+    .comingsoon {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin: auto;
+        width: 100%;  
+        height: fit-content;   
+        
+    }
+
+  
 }

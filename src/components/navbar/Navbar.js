@@ -4,7 +4,7 @@ import './Navbar.css'
 import Logo from '../../assets/logo.png'
 import { BsBag} from 'react-icons/bs'
 import {AiOutlineHeart} from 'react-icons/ai'
-import {FaHamburger, FaBars, FaTimes} from 'react-icons/fa'
+import { FaBars, FaTimes} from 'react-icons/fa'
 
 const Navbar = () => {
 

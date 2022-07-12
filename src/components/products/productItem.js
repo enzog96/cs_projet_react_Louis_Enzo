@@ -3,7 +3,7 @@ import test from "../../assets/fashion-recent-products-06-1.jpg";
 import "./productItem.css";
 
 
-const products = [
+export const products = [
     {id: 1, name: "lorem ipsum", price: 75, img: test}, 
     {id: 2, name: "lorem ipsum", price: 75, img: test},
     {id: 3, name: "lorem ipsum", price: 75, img: test}, 

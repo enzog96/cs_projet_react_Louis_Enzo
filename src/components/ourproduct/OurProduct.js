@@ -3,6 +3,10 @@ import "./OurProduct.css";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Fashion1 from '../../assets/fashion-recent-products-01-1-1.jpg'
+import Fashion2 from '../../assets/fashion-recent-products-01-d.jpg'
+import Fashion3 from '../../assets/fashion-recent-products-02-1-1.jpg'
+import Fashion4 from '../../assets/fashion-recent-products-04-a-1.jpg'
+
 
 const OurProduct = () => {
   return (
@@ -24,17 +28,17 @@ const OurProduct = () => {
               <p>$75.00</p>
             </div>
             <div className='smalltab'>
-              <img src={Fashion1} alt="" />
+              <img src={Fashion2} alt="" />
               <p>Herschel supply co 25l</p>
               <p>$75.00</p>
             </div>
             <div className='smalltab'>
-              <img src={Fashion1} alt="" />
+              <img src={Fashion3} alt="" />
               <p>Herschel supply co 25l</p>
               <p>$75.00</p>
             </div>
             <div className='smalltab'>
-              <img src={Fashion1} alt="" />
+              <img src={Fashion4} alt="" />
               <p>Herschel supply co 25l</p>
               <p>$75.00</p>
             </div>

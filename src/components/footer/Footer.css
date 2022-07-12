@@ -42,6 +42,11 @@
 }
 
 
-
+@media screen and (max-width: 740px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
 
 
