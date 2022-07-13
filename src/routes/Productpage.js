@@ -10,9 +10,11 @@ import data from "../components/products/productItem"
 
 export default function Productpage() {
     const [filter, setFilter] = useState('');
-    const [activefilter, setActiveFilter] = useState('false');
     function handlefilter(x){
         setFilter(x)
+    }
+    function getInput(y){
+        console.log(y)
     }
     return(
     <>
@@ -22,7 +24,7 @@ export default function Productpage() {
     <div className='product-gallery-container'>
         <ProductFilters filter={filter} handlefilter={handlefilter}/>
         <div className="col-2">
-        <ProductItem filter={filter} activefilter={activefilter} /></div>
+        <ProductItem filter={filter} getInput={getInput}/></div>
         </div>
     </div>
     <Footer/>
