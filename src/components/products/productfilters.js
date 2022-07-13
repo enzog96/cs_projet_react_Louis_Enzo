@@ -3,22 +3,19 @@ import "./productfilters.css"
 import {FiSearch} from "react-icons/fi"
 
 
-export default function ProductFilters(){
-    let [filter, setFilter] = useState('All')
-    function updateFilter(filterc){
-        setFilter(filterc)   
+export default function ProductFilters(props){
+    const handlefilter = (x) => {
+        props.setFilter(x)
     }
-    
     return(
         <div className='productfilters'>
             <h2>Categories</h2>
-            <h3>Current filter : {filter}</h3>
             <ul>
-                <li value="All" onClick={()=>updateFilter('All')}>All</li>
-                <li value="Women" onClick={()=>updateFilter('Women')}>Women</li>
-                <li value="Kids" onClick={()=>updateFilter('Kids')}>Kids</li>
-                <li value="Men" onClick={()=>updateFilter('Men')}>Men</li>
-                <li value="Accessories" onClick={()=>updateFilter('Accessories')}>Accessories</li>
+                <li onClick={()=>handlefilter("All")}>All</li>
+                <li onClick={()=>handlefilter("Women")} >Women</li>
+                <li onClick={()=>handlefilter("Kids")} >Kids</li>
+                <li onClick={()=>handlefilter("Men")} >Men</li>
+                <li onClick={()=>handlefilter("Accessories")} >Accessories</li>
             </ul>
             <h2>Filter</h2>
             <div className="form-group fg--search">
@@ -26,5 +23,4 @@ export default function ProductFilters(){
             <button type="submit"><FiSearch/></button>
             </div>
         </div>
-    )
-}
+    )}

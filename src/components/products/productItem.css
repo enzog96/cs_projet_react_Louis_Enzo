@@ -30,22 +30,22 @@
 
 .sale-red-pill{
     background-color: red;
-    width: 20%;
+    padding: 1vh;
     color:white; 
-    text-align: center;
     border-radius:25vh;
-    margin-inline: 3vh;
-    display: block;
+    position: absolute; 
+    left: 5%;
+    top: 5%;
 }
 
 .new-green-pill{
     background-color: rgb(55, 116, 55);
-    width: 20%;
+    padding: 1vh;
     color:white; 
-    text-align: center;
     border-radius:25vh;
-    margin-inline: 3vh;
-    display: block;
+    position: absolute; 
+    left: 5%;
+    top: 5%;
 }
 
 .onsale-price-line-through{
@@ -59,4 +59,26 @@
 
 .product-prices-flex-container>p{
     margin-left: 1vh;
+}
+.product-item-bg-pic{
+    position: relative;
+}
+.btnhover {
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+    border: 1px solid black;
+    padding:  1vh;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    left: calc(37%);
+}
+
+.hearthover {
+    color: white ;
+    position: absolute; 
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
 }

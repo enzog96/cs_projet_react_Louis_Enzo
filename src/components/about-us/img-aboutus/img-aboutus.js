@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from '../../../assets/item-16_84f06345-b149-4331-9957-2d65c6b87584_700x933.jpg'
+import Img from '../../../assets/item-16.jpg'
 import "./img-aboutus.css"
 
 export default function Imgaboutus() {
