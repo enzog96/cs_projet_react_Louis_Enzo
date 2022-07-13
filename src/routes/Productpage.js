@@ -9,16 +9,20 @@ import data from "../components/products/productItem"
 
 
 export default function Productpage() {
-    const [filter, setFilter] = useState('')
+    const [filter, setFilter] = useState('');
+    const [activefilter, setActiveFilter] = useState('false');
+    function handlefilter(x){
+        setFilter(x)
+    }
     return(
     <>
     <div className="product-container">
         <Navbar/>
         <Banner title="Products" subtitle="New Arrivals Women Collection" />
     <div className='product-gallery-container'>
-        <ProductFilters filter={filter} setFilter={setFilter}/>
+        <ProductFilters filter={filter} handlefilter={handlefilter}/>
         <div className="col-2">
-        <ProductItem/></div>
+        <ProductItem filter={filter} activefilter={activefilter} /></div>
         </div>
     </div>
     <Footer/>

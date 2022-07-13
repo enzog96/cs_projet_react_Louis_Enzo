@@ -3,15 +3,12 @@ import "./productfilters.css"
 import {FiSearch} from "react-icons/fi"
 
 
-export default function ProductFilters(props){
-    const handlefilter = (x) => {
-        props.setFilter(x)
-    }
+export default function ProductFilters({handlefilter}){
     return(
         <div className='productfilters'>
             <h2>Categories</h2>
             <ul>
-                <li onClick={()=>handlefilter("All")}>All</li>
+                <li onClick={()=>handlefilter("")}>All</li>
                 <li onClick={()=>handlefilter("Women")} >Women</li>
                 <li onClick={()=>handlefilter("Kids")} >Kids</li>
                 <li onClick={()=>handlefilter("Men")} >Men</li>
