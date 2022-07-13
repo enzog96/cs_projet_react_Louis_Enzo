@@ -1,10 +1,21 @@
-import React, { Component } from 'react';
+import React,{useState} from 'react';
 import './Table.css'
 import Test from '../../assets/fashion-recent-products-01-1-1.jpg'
 
 
-class Table extends Component {
-    render() {
+function Table() {
+    const [count, setCount] = useState(1);
+
+    function increase() {
+        if(count < 10){
+      setCount(count + 1);}
+    }
+
+    function decrease() {
+        if(count > 0){
+        setCount(count - 1);}
+    }
+
         return (
             <div className='table'>
                 <div className='tab-names'>
@@ -20,9 +31,9 @@ class Table extends Component {
                     </div>
                     <div> <p>$89.00</p> </div>
                     <div className='table-btn'>
-                        <button> - </button>
-                        <input type="text" placeholder='1' />
-                        <button> + </button>
+                        <button onClick={()=>decrease()}> - </button>
+                        <input type="text" value={count} />
+                        <button onClick={()=>increase()}> + </button>
                     </div>
                     <div> <p>$58,00</p> </div>
                 </div>
@@ -32,7 +43,6 @@ class Table extends Component {
                 
             </div>
         );
-    }
 }
 
 export default Table;
