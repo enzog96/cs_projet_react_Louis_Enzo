@@ -1,3 +1,10 @@
 .aboutImage{
     padding: 5vh;
 }
+
+
+@media screen and (max-width: 740px) {
+    .aboutImage img {
+        width: 100%;
+    }
+}

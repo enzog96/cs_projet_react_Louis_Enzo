@@ -4,6 +4,7 @@ import Banner from '../components/banner/Banner';
 import Minimap from '../components/contact/minimap/minimap';
 import Form from '../components/contact/form/form';
 import Footer from "../components/footer/Footer";
+import '../App.css'
 
 
 export default function Contact() {  

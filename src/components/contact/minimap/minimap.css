@@ -2,3 +2,9 @@
     width:35vw;
     height:70vh;
 }
+
+@media screen and (max-width: 740px) {
+    .maps{
+        width: 100% !important;
+    }
+}
