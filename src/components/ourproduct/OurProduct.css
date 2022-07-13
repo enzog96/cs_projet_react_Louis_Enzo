@@ -1,6 +1,6 @@
 .product {
     width: 100%;
-    height: 30vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,27 +17,7 @@
 .smalltab {
     width: 35vh;
     height: 35vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.smalltab-p {
-    display: flex;
-    align-self: flex-start;
-}
-
-.smalltab p {
-    display: flex;
-    align-self: flex-start;
-    line-height: 3vh;
-    margin-left: 4vh;
-    margin-top: 1vh;
-}
-
-.smalltab img {
-    width: 80%;
+    margin: 1vh;
 }
 
 .main-tab {
@@ -59,38 +39,6 @@
 
 .popopo:hover {
     border-bottom: 1px solid #000;
-}
-
-.smalltab-new {
-    color: #fff;
-    background-color: green;
-    display: flex;
-    align-items: center;
-    padding: 1vh;
-    font-size: 1.5vh;
-    width: 6vh;
-    height: 3vh;
-    border-radius: 5vh;
-    position: absolute;
-    left: 13%;
-    margin: 1vh;
-    
-}
-.smalltab-sale {
-    color: #fff;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    padding: 1vh;
-    font-size: 1.5vh;
-    width: 6vh;
-    height: 3vh;
-    border-radius: 5vh;
-    position: absolute;
-    left: 13%;
-    top: 0;
-    margin: 1vh;
-    
 }
 
 

@@ -5,7 +5,7 @@ import Product from './routes/Product'
 import About from './routes/About'
 import Contact from './routes/Contact'
 import Basket from './routes/Basket'
-import Heart from './components/heart/Heart'
+import Heart from './routes/Heart'
 import React from 'react';
 
 

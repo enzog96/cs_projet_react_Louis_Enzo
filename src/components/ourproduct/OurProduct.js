@@ -7,6 +7,9 @@ import Fashion1 from '../../assets/fashion-recent-products-01-1-1.jpg'
 import Fashion2 from '../../assets/fashion-recent-products-01-d.jpg'
 import Fashion3 from '../../assets/fashion-recent-products-02-1-1.jpg'
 import Fashion4 from '../../assets/fashion-recent-products-04-a-1.jpg'
+import Product from "../../routes/Product";
+
+import {products} from '../products/productItem';
 
 
 const OurProduct = () => {
@@ -16,8 +19,9 @@ const OurProduct = () => {
   
 
   return (
-    <div className='product'  onMouseOver={() => setHover(true)}
-                              onMouseLeave={() => setHover(false)}>
+    <div className='product'  
+    onMouseOver={() => setHover(true)}
+    onMouseLeave={() => setHover(false)}>
       <h2>OUR PRODUCTS</h2>
       <Tabs>
         <TabList className='main-tab'>
@@ -29,121 +33,87 @@ const OurProduct = () => {
 
         <TabPanel>
           <div className='tab1'>
-            <div className='smalltab'>
-              <img src={Fashion1} alt="" />
-              <p>Herschel supply co 25l</p>
-              <p>$75.00</p>
-              <div className='smalltab-new'>
-                NEW
-              </div>
-               {isHovered && (
-                 <button className="btnhover">
-                   ADD TO CART 
-                 </button>      
-               )}
-               {isHovered && (
-                 <AiOutlineHeart size={35} className='hearthover'/>
-               )}
-            </div>
-            <div className='smalltab'>
-              <img src={Fashion2} alt="" />
-              <p>Denim jacket blue</p>
-              <p>$92.50</p>
-              {isHovered && (
-                 <button className="btnhover">
-                   ADD TO CART 
-                 </button>      
-               )}
-               {isHovered && (
-                 <AiOutlineHeart size={35} className='hearthover'/>
-               )}
-            </div>
-            <div className='smalltab'>
-              <img src={Fashion3} alt="" />
-              <p>Coach slim easton black</p>
-              <p>$165.90</p>
-              {isHovered && (
-                 <button className="btnhover">
-                   ADD TO CART 
-                 </button>      
-               )}
-               {isHovered && (
-                 <AiOutlineHeart size={35} className='hearthover'/>
-               )}
-            </div>
-            <div className='smalltab'>
-              <img src={Fashion4} alt="" />
-              <p>Herschel supply co 25l</p>
-              <div className="smalltab-p">
-                <p style={{textDecoration: 'line-through'}}>$29.50</p>
-                <p style={{color: 'red', marginLeft: '1vh'}}>$15.90</p>
-                <div className='smalltab-sale'>
-                    SALE
-                </div>
-              </div>
-              {isHovered && (
-                 <button className="btnhover">
-                   ADD TO CART 
-                 </button>      
-               )}
-               {isHovered && (
-                 <AiOutlineHeart size={35} className='hearthover'/>
-               )}
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel className='tab1'>
-        <div className='smalltab'>
-              <img src={Fashion1} alt="" />
-              <p>Herschel supply co 25l</p>
-              <p>$75.00</p>
-              <div className='smalltab-new'>
-                NEW
-              </div>
-              {isHovered && (
-                 <button className="btnhover">
-                   ADD TO CART 
-                 </button>      
-               )}
-               {isHovered && (
-                 <AiOutlineHeart size={35} className='hearthover'/>
-               )}
+              {products.slice(0, 4).map((product) =>
+              <div>
+                  <div className="smalltab" key={product.id} style={{
+                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    
+                  }}>
+                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
+                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
+                  </div>
+                  <div>
+                    <p>{product.name}</p>
+                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
+                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
+                  </div>
+                  </div>
+              )}            
             </div>
         </TabPanel>
         <TabPanel>
-        <div className='smalltab'>
-              <img src={Fashion4} alt="" />
-              <p>Herschel supply co 25l</p>
-              <div className="smalltab-p">
-                <p style={{textDecoration: 'line-through'}}>$29.50</p>
-                <p style={{color: 'red', marginLeft: '1vh'}}>$15.90</p>
-                <div className='smalltab-sale'>
-                    SALE
-                </div>
-              </div>
-              {isHovered && (
-                 <button className="btnhover">
-                   ADD TO CART 
-                 </button>      
-               )}
-               {isHovered && (
-                 <AiOutlineHeart size={35} className='hearthover'/>
-               )}
+          <div className='tab1'>
+              {products.filter(products => products.new === true).map((product) => 
+              
+              <div>
+                  <div className="smalltab" key={product.id} style={{
+                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    
+                  }}>
+                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
+                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
+                  </div>
+                  <div>
+                    <p>{product.name}</p>
+                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
+                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
+                  </div>
+                  </div>
+              )}            
             </div>
         </TabPanel>
         <TabPanel>
-        <div className='smalltab'>
-              <img src={Fashion2} alt="" />
-              <p>Denim jacket blue</p>
-              <p>$92.50</p>
-              {isHovered && (
-                 <button className="btnhover">
-                   ADD TO CART 
-                 </button>      
-               )}
-               {isHovered && (
-                 <AiOutlineHeart size={35} className='hearthover'/>
-               )}
+          <div className='tab1'>
+              {products.filter(products => products.sale === true).map((product) =>
+              <div>
+                  <div className="smalltab" key={product.id} style={{
+                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    
+                  }}>
+                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
+                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
+                  </div>
+                  <div>
+                    <p>{product.name}</p>
+                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
+                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
+                  </div>
+                  </div>
+              )}            
+            </div>
+        </TabPanel>
+        <TabPanel>
+          <div className='tab1'>
+              {products.slice(0, 7).filter(products => products.sale === false ).filter(products => products.new === false).map((product) =>
+              <div>
+                  <div className="smalltab" key={product.id} style={{
+                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    
+                  }}>
+                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
+                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
+                  </div>
+                  <div>
+                    <p>{product.name}</p>
+                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
+                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
+                  </div>
+                  </div>
+              )}            
             </div>
         </TabPanel>
       </Tabs>
