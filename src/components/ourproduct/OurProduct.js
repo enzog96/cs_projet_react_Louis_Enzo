@@ -7,9 +7,9 @@ import Fashion1 from '../../assets/fashion-recent-products-01-1-1.jpg'
 import Fashion2 from '../../assets/fashion-recent-products-01-d.jpg'
 import Fashion3 from '../../assets/fashion-recent-products-02-1-1.jpg'
 import Fashion4 from '../../assets/fashion-recent-products-04-a-1.jpg'
-import Product from "../../routes/Product";
+import Productpage from "../../routes/Productpage";
 
-import {products} from '../products/productItem';
+import {data} from '../products/productItem';
 
 
 const OurProduct = () => {
@@ -33,7 +33,7 @@ const OurProduct = () => {
 
         <TabPanel>
           <div className='tab1'>
-              {products.slice(0, 4).map((product) =>
+              {data.slice(0, 4).map((product) =>
               <div>
                   <div className="smalltab" key={product.id} style={{
                     backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
@@ -54,7 +54,7 @@ const OurProduct = () => {
         </TabPanel>
         <TabPanel>
           <div className='tab1'>
-              {products.filter(products => products.new === true).map((product) => 
+              {data.filter(data => data.new === true).map((product) => 
               
               <div>
                   <div className="smalltab" key={product.id} style={{
@@ -76,7 +76,7 @@ const OurProduct = () => {
         </TabPanel>
         <TabPanel>
           <div className='tab1'>
-              {products.filter(products => products.sale === true).map((product) =>
+              {data.filter(data => data.sale === true).map((product) =>
               <div>
                   <div className="smalltab" key={product.id} style={{
                     backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
@@ -97,7 +97,7 @@ const OurProduct = () => {
         </TabPanel>
         <TabPanel>
           <div className='tab1'>
-              {products.slice(0, 7).filter(products => products.sale === false ).filter(products => products.new === false).map((product) =>
+              {data.slice(0, 7).filter(data => data.sale === false ).filter(data => data.new === false).map((product) =>
               <div>
                   <div className="smalltab" key={product.id} style={{
                     backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
