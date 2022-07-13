@@ -1,11 +1,11 @@
-import React, { useState, setState} from 'react';
+import React, { useState } from 'react';
 import "./productfilters.css"
 import {FiSearch} from "react-icons/fi"
 
 
-export default function ProductFilters({handlefilter}, {getInput}){
+export default function ProductFilters({handlefilter}){
     const [input, setInput] = useState('');
-
+    console.log(input)
     return(
         <div className='productfilters'>
             <h2>Categories</h2>
