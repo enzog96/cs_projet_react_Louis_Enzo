@@ -1,29 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Moonrocks&family=Splash&display=swap');
+
+
 .table {
-    width: 50%;
+    width: 70%;
     margin: 15vh auto;
     
 }
 
 .tab-names {
     display: grid;
-    grid-template-columns: 30% 20% 30% 10% 10%;
-    margin: auto;
+    grid-template-columns: 40% 25% 25% 10%;
+    margin:0 auto;
     margin-bottom: 5vh;
-    width: 80%;
+    width: 90%;
+    color: #555;
+    text-transform: uppercase;
+    font-family: 'Montserrat' ;
+    font-weight: bold;
+    
+}
+
+.tab-names1 {
+    display: flex;
+    justify-content: center;
 }
 
 .table-div {
     display: grid;
-    grid-template-columns: 30% 20% 30% 10% 10%;
+    grid-template-columns: 40% 20% 30% 10%;
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: 1px solid #000;
+    border: 1px solid rgb(126, 126, 126);
+    padding: 4vh;
+    color: #6D6875;
 
 }
 
 .table-div img {
-    width: 60%;
+    width: 20%;
 }
 
 .table-btn {
@@ -32,10 +47,38 @@
 }
 
 .table-btn input {
-    width: 3vh;
+    width: 5vh;
     text-align: center;
 }
 .table-btn button {
     width: 5vh;
-    height: 4vh;
+    height: 5vh;
+    cursor: pointer;
 }
+
+.table-img {
+    display: flex;
+    align-items: center;
+    
+}
+
+.table-img p {
+    margin-left: 10vh;
+}
+
+.table-big-btn {
+    display: flex;
+    justify-content: end;
+    border: 1px solid rgb(126, 126, 126);
+    padding: 4vh;
+}
+
+.table-big-btn button {
+    color: #fff;
+    background: #000;
+    width: 17vh;
+    height: 5vh;
+    border-radius: 5vh;
+    cursor: pointer;
+}
+

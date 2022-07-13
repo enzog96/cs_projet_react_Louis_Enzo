@@ -7,7 +7,7 @@ const Video = () => {
 
     return (
         <div className='video-div'>
-                <video autoPlay={true} loop={true} className='video' src={Videob}></video>
+                <video autoPlay={true} loop={true} muted={true} className='video' src={Videob}></video>
             <div className='video-text'>
                 <h4>The Beauty</h4>
                 <h2>LOOKBOOK</h2>

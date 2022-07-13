@@ -1,8 +1,7 @@
 import React from 'react';
-import './Heart.css'
-import Navbar from '../navbar/Navbar';
-import Banner from '../banner/Banner';
-import Footer from '../footer/Footer';
+import Navbar from '../components/navbar/Navbar';
+import Banner from '../components/banner/Banner';
+import Footer from '../components/footer/Footer';
 
 const Heart = () => {
     return (

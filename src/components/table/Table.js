@@ -8,34 +8,26 @@ class Table extends Component {
         return (
             <div className='table'>
                 <div className='tab-names'>
-                    <p>PRODUCT</p>
+                    <p className='tab-names1'>PRODUCT</p>
                     <p>PRICE</p>
                     <p>QUANTITY</p>
                     <p>TOTAL</p>
-                    <p>ADD</p>
                 </div>
                 <div className='table-div'>
-                    <div>
+                    <div className='table-img'>
                         <img src={Test} alt="" />
-                    </div>
-                    <div>
                         <p>dsfsdsfs</p>
                     </div>
-                    <div>
-                        <p>89</p>
-                    </div>
+                    <div> <p>$89.00</p> </div>
                     <div className='table-btn'>
-                        <button>
-                            -
-                        </button>
+                        <button> - </button>
                         <input type="text" placeholder='1' />
-                        <button>
-                            +
-                        </button>
+                        <button> + </button>
                     </div>
-                    <div>
-                        <p>58</p>
-                    </div>
+                    <div> <p>$58,00</p> </div>
+                </div>
+                <div className='table-big-btn'>
+                    <button>PROCEED TO PAYMENT</button>
                 </div>
                 
             </div>

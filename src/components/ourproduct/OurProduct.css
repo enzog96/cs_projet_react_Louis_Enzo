@@ -1,6 +1,6 @@
 .product {
     width: 100%;
-    height: fit-content;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,21 +17,7 @@
 .smalltab {
     width: 35vh;
     height: 35vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.smalltab p {
-    display: flex;
-    align-self: flex-start;
-    line-height: 3vh;
-    margin-left: 4vh;
-    margin-top: 1vh;
-}
-
-.smalltab img {
-    width: 80%;
+    margin: 1vh;
 }
 
 .main-tab {
@@ -55,6 +41,26 @@
     border-bottom: 1px solid #000;
 }
 
+
+.btnhover {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    border-radius: 5vh;
+    border: 1px solid black;
+    padding:  1vh;
+    cursor: pointer ;
+}
+
+.hearthover {
+    color: white ;
+    position : absolute ;
+    top: 0 ;
+    right: 13% ;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 740px) {
     .tab1 {
         display: grid;
@@ -72,5 +78,8 @@
 
     .smalltab {
         margin: 5vh;
+    }
+    .product {
+        height: fit-content;
     }
 }
