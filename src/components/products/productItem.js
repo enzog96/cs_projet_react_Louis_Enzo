@@ -1,28 +1,24 @@
-import React from 'react';
+import React, { useState} from 'react';
 import test from "../../assets/fashion-recent-products-06-1.jpg";
 import "./productItem.css";
 
 
-export const products = [
-    {id: 1, name: "lorem ipsum", price: 75, img: test}, 
-    {id: 2, name: "lorem ipsum", price: 75, img: test},
-    {id: 3, name: "lorem ipsum", price: 75, img: test}, 
-    {id: 4, name: "lorem ipsum", price: 75, img: test},
-    {id: 5, name: "lorem ipsum", price: 75, img: test}, 
-    {id: 6, name: "lorem ipsum", price: 75, img: test},
-    {id: 7, name: "lorem ipsum", price: 75, img: test}, 
-    {id: 8, name: "lorem ipsum", price: 75, img: test},
-    {id: 9, name: "lorem ipsum", price: 75, img: test}, 
+const products = [
+    {id: 1, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: true, newprice: 45.00, category: "Kids"}, 
+    {id: 2, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Accessories"},
+    {id: 3, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Accessories"}, 
+    {id: 4, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Women"},
+    {id: 5, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Accessories"}, 
+    {id: 6, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Women"},
+    {id: 7, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids"}, 
+    {id: 8, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids"},
+    {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids"},
 ]
 
-export default class ProductItem extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    render() {
+export default function ProductItem (){
         return(
             <div>
-                <p>Number of products : {products.length}</p>
+                <p className="number-products">Number of products : {products.length}</p>
             <div className="product-gallery">
             {products.map((product) => (
                 <>
@@ -31,10 +27,18 @@ export default class ProductItem extends React.Component {
                     backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat', 
-                    height: "500px", maxWidth: "400px"}}></div>
+                    height: "500px", maxWidth: "400px", 
+                    }}>
+                        {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
+                        {product.new===true?<div className='new-green-pill'>New</div>: ""}
+                    </div>
+                    
                 <div>
                     <p>{product.name}</p>
-                    <p>{product.price}$</p>
+                    <div className='product-prices-flex-container'>
+                        <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
+                        <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
+                    </div>
                 </div>
                 </div>
                 </>
@@ -42,5 +46,4 @@ export default class ProductItem extends React.Component {
             </div>
             </div>
         )
-    }
 }
