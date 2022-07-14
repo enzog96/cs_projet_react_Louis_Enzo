@@ -18,6 +18,7 @@
     width: 35vh;
     height: 35vh;
     margin: 1vh;
+    position: relative;
 }
 
 .main-tab {
@@ -46,8 +47,9 @@
     background-color: black;
     color: white;
     position: absolute;
-    bottom: 0;
     border-radius: 5vh;
+    bottom: 2%;
+    left: 35%;
     border: 1px solid black;
     padding:  1vh;
     cursor: pointer ;
@@ -56,9 +58,14 @@
 .hearthover {
     color: white ;
     position : absolute ;
-    top: 0 ;
-    right: 13% ;
+    top: 0;
+    right: 5% ;
     cursor: pointer;
+}
+
+.smalltab-p {
+    display: flex;
+    gap: 1vh;
 }
 
 @media screen and (max-width: 740px) {
