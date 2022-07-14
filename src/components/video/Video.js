@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Videob from '../../assets/banner-video.mp4'
 import {BsFillPlayFill} from 'react-icons/bs'
 import './Video.css'
 
 const Video = () => {
+    
 
     return (
         <div className='video-div'>

@@ -82,3 +82,9 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 740px) {
+    .table-div {
+        grid-template-columns: 100%;
+    }
+    
+}

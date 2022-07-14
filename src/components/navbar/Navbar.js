@@ -12,6 +12,16 @@ const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleNav = () => setNav(!nav)
 
+    const [open, setOpen] = useState(false)
+
+    const handleClick = () => {
+        if (open === false) {
+            setOpen(true)  
+        } else if (open === true) {
+            setOpen(false)  
+    }
+    }
+   
 
     return (
         <div className='navbar'>
@@ -35,14 +45,27 @@ const Navbar = () => {
                     <AiOutlineHeart className='logo1' size={20} />
                 </NavLink>
                 <p>|</p>
-                <NavLink to='/basket'>
-                    <BsBag className='logo2' size={25}/>
+                <NavLink to= ''>
+                    <BsBag onClick={handleClick}  className='logo2' size={25}/>
                 </NavLink> 
             </div>
             <div className='hamburger' onClick={handleNav}>
                         {nav ? (<FaTimes size={20} style={{color: '#ffffff'}}/>) : (<FaBars size={20}/>)}
             </div>
+            {open && (
+                <div className="container-cart">
+                    <NavLink to='/basket'>
+                        <button className='cart-btn'>VIEW BASKET</button>
+                    </NavLink>
+                </div>
+            )
+                
+            
+
+            }
         </div>
+        
+        
     );
 };
 

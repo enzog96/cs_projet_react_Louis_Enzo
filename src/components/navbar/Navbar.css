@@ -87,6 +87,30 @@
     color: red;
 }
 
+
+.container-cart {
+    width: 30vh;
+    height: fit-content;
+    background-color: #fff;
+    position: absolute;
+    right: 3%;
+    top: 100%;
+    border-top: 5px solid gray;
+    display: flex;
+    justify-content: center;
+    padding: 3vh;
+}
+
+.cart-btn {
+    width: 20vh;
+    height: 5vh;
+    border-radius: 5vh;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+}
+
 @media screen and (max-width: 740px) {
     .navbar .nav-menu {
         position: absolute;

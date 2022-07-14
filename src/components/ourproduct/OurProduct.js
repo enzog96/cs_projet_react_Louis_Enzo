@@ -3,11 +3,7 @@ import "./OurProduct.css";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import {AiOutlineHeart} from 'react-icons/ai'
 import 'react-tabs/style/react-tabs.css';
-import Fashion1 from '../../assets/fashion-recent-products-01-1-1.jpg'
-import Fashion2 from '../../assets/fashion-recent-products-01-d.jpg'
-import Fashion3 from '../../assets/fashion-recent-products-02-1-1.jpg'
-import Fashion4 from '../../assets/fashion-recent-products-04-a-1.jpg'
-import Productpage from "../../routes/Productpage";
+
 
 import {data} from '../products/productItem';
 
@@ -44,7 +40,7 @@ const OurProduct = () => {
                     {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
                     {product.new===true?<div className='new-green-pill'>New</div>: ""}
                     {isHovered && (
-                      <button className="btnhover">
+                      <button  className="btnhover">
                           ADD TO CART 
                       </button>
                   )}
