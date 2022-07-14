@@ -8,16 +8,25 @@ import ProductCard from './productCard';
 
 
 export const data = [
-    {id: 1, name: "pull", price: 75.00, img: test, new: false, sale: true, newprice: 45.00, category: "Kids", inbasket: false}, 
-    {id: 2, name: "t-shirt", price: 75.00, img: item4, new: false, sale: false, newprice: "", category: "Accessories", inbasket: false},
-    {id: 3, name: "pantalon", price: 75.00, img: item15, new: true, sale: false, newprice: "", category: "Accessories", inbasket: false}, 
-    {id: 4, name: "test", price: 75.00, img: item16, new: true, sale: false, newprice: "", category: "Men", inbasket: false},
-    {id: 5, name: "ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Accessories", inbasket: false}, 
-    {id: 6, name: "lorem", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Women", inbasket: false},
-    {id: 7, name: "dkim", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids", inbasket: false}, 
-    {id: 8, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids", inbasket: false},
-    {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids", inbasket: false},
+    {id: 1, name: "pull", price: 75.00, img: test, new: false, sale: true, newprice: 45.00, category: "Kids", inbasket: false, infavorites: false}, 
+    {id: 2, name: "t-shirt", price: 75.00, img: item4, new: false, sale: false, newprice: "", category: "Accessories", inbasket: false, infavorites: false},
+    {id: 3, name: "pantalon", price: 75.00, img: item15, new: true, sale: false, newprice: "", category: "Accessories", inbasket: false, infavorites: false}, 
+    {id: 4, name: "test", price: 75.00, img: item16, new: true, sale: false, newprice: "", category: "Men", inbasket: false, infavorites: false},
+    {id: 5, name: "ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Accessories", inbasket: false, infavorites: false}, 
+    {id: 6, name: "lorem", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Women", inbasket: false, infavorites: false},
+    {id: 7, name: "dkim", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids", inbasket: false, infavorites: false}, 
+    {id: 8, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids", inbasket: false, infavorites: false},
+    {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids", inbasket: true, infavorites: false},
 ]
+
+let dataInbasket = []
+for (var i = 0; i < data.length; i++){
+    if(data[i].inbasket === true){
+        dataInbasket.push(data[i])
+    }
+}
+
+console.log(dataInbasket)
 
 let numberOfSales = 0;
 

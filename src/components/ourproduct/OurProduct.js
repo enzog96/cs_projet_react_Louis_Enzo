@@ -1,19 +1,12 @@
 import React, { useState} from "react";
 import "./OurProduct.css";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import {AiOutlineHeart} from 'react-icons/ai'
 import 'react-tabs/style/react-tabs.css';
-
-
 import {data} from '../products/productItem';
+import ProductCard from "../products/productCard";
 
 
 const OurProduct = () => {
-
-  const [isHovered, setHover] = useState(false);
-
-  
-
   return (
     <div className='product'>
       <h2>OUR PRODUCTS</h2>
@@ -29,70 +22,16 @@ const OurProduct = () => {
           <div className='tab1'>
               {data.slice(0, 4).map((product) =>
               <div>
-                  <div className="smalltab" 
-                  onMouseOver={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)} 
-                  key={product.id} style={{
-                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    
-                  }}>
-                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
-                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
-                    {isHovered && (
-                      <button  className="btnhover">
-                          ADD TO CART 
-                      </button>
-                  )}
-                  {isHovered && (
-                      <AiOutlineHeart size={35} className='hearthover'/>
-                  )}
-                  </div>
-                  
-                  <div>
-                    <p>{product.name}</p>
-                    <div className= "smalltab-p">
-                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
-                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
-                    </div>
-                  </div>
-                  
-                  </div>
-                  
-              )}           
-             
-            </div>
-            
-            
+                  <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
+              </div>)}       
+          </div> 
         </TabPanel>
         <TabPanel>
           <div className='tab1'>
               {data.filter(data => data.new === true).map((product) => 
-              
               <div>
-                  <div className="smalltab" onMouseOver={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}  key={product.id} style={{
-                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    
-                  }}>
-                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
-                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
-                    {isHovered && (
-                      <button className="btnhover">
-                          ADD TO CART 
-                      </button>
-                  )}
-                  {isHovered && (
-                      <AiOutlineHeart size={35} className='hearthover'/>
-                  )}
-                  </div>
-                  <div>
-                    <p>{product.name}</p>
-                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
-                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
-                  </div>
-                  </div>
+              <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
+          </div>
               )}            
             </div>
         </TabPanel>
@@ -100,63 +39,19 @@ const OurProduct = () => {
           <div className='tab1'>
               {data.filter(data => data.sale === true).map((product) =>
               <div>
-                  <div className="smalltab" onMouseOver={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}  key={product.id} style={{
-                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    
-                  }}>
-                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
-                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
-                    {isHovered && (
-                      <button className="btnhover">
-                          ADD TO CART 
-                      </button>
-                  )}
-                  {isHovered && (
-                      <AiOutlineHeart size={35} className='hearthover'/>
-                  )}
-                  </div>
-                  <div>
-                    <p>{product.name}</p>
-                    <div className="smalltab-p">
-                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
-                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
-                    </div>
-                  </div>
-                  </div>
+                <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
+              </div>
               )}            
-            </div>
+          </div>
         </TabPanel>
         <TabPanel>
           <div className='tab1'>
               {data.slice(0, 7).filter(data => data.sale === false ).filter(data => data.new === false).map((product) =>
               <div>
-                  <div className="smalltab" onMouseOver={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}  key={product.id} style={{
-                    backgroundImage: "url(" + product.img + ")",backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    
-                  }}>
-                    {product.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
-                    {product.new===true?<div className='new-green-pill'>New</div>: ""}
-                    {isHovered && (
-                      <button className="btnhover">
-                          ADD TO CART 
-                      </button>
-                  )}
-                  {isHovered && (
-                      <AiOutlineHeart size={35} className='hearthover'/>
-                  )}
-                  </div>
-                  <div>
-                    <p>{product.name}</p>
-                    <p>{product.sale === true?<span className='onsale-price-line-through'>{product.price}$</span> : product.price + "$"}</p>
-                    <p>{product.newprice !== ""?<span className='newprice'>{product.newprice}$</span>: ""}</p>
-                  </div>
-                  </div>
+              <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
+              </div>
               )}            
-            </div>
+          </div>
         </TabPanel>
       </Tabs>
     </div>

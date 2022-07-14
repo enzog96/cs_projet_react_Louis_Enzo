@@ -9,7 +9,7 @@
 
 .tab-names {
     display: grid;
-    grid-template-columns: 40% 25% 25% 10%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin:0 auto;
     margin-bottom: 5vh;
     width: 90%;
@@ -27,7 +27,7 @@
 
 .table-div {
     display: grid;
-    grid-template-columns: 40% 20% 30% 10%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     margin: auto;

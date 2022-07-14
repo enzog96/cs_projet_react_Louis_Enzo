@@ -9,21 +9,18 @@
 
 .tab1 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 100%);
     margin-top: 5vh;
    
 }
 
 .smalltab {
-    width: 35vh;
-    height: 35vh;
+    height: fit-content;
     margin: 1vh;
-    position: relative;
 }
 
 .main-tab {
     display: flex;
-    justify-content: center;
     border: none;
 }
 

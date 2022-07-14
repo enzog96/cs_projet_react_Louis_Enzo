@@ -9,7 +9,7 @@ const Basket = () => {
     return (
         <div>
             <Navbar/>
-            <Banner title="PANIER" />
+            <Banner title="Shopping cart" />
             <Table/>
             <Footer/>
         </div>
