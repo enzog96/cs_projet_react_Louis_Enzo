@@ -4,6 +4,7 @@ import Banner from '../components/banner/Banner';
 import ProductItem from "../components/products/productItem";
 import Footer from "../components/footer/Footer";
 import ProductFilters from "../components/products/productfilters.js";
+import Sold from "../components/sold/Sold"
 
 
 
@@ -18,6 +19,7 @@ export default function Productpage() {
     return(
     <>
     <div className="product-container">
+        <Sold/>
         <Navbar/>
         <Banner title="Products" subtitle="New Arrivals Women Collection" />
     <div className='product-gallery-container'>
