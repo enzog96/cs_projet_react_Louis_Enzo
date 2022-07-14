@@ -19,8 +19,16 @@ export const data = [
     {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids", inbasket: false},
 ]
 
+let numberOfSales = 0;
+
+for (let index = 0; index < data.length; index++) {
+    if(data[index].sale === true){
+        numberOfSales += 1;
+    }
+}
+export let PassNumber = numberOfSales;
 export default function ProductItem (props){
-            
+    
         return(
             <div>
                     <p className="number-products">Number of products : {data.length}</p>
