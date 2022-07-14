@@ -3,9 +3,7 @@ import "./productfilters.css"
 import {FiSearch} from "react-icons/fi"
 
 
-export default function ProductFilters({handlefilter}){
-    const [input, setInput] = useState('');
-    console.log(input)
+export default function ProductFilters({handlefilter, setSearchTerm, searchTerm}){
     return(
         <div className='productfilters'>
             <h2>Categories</h2>
@@ -18,7 +16,8 @@ export default function ProductFilters({handlefilter}){
             </ul>
             <h2>Filter</h2>
             <div className="form-group fg--search">
-            <input type="text" value={input} onInput={e => setInput(e.target.value)} className="input" placeholder="Search products..."></input>
+            <input type="text" value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)} className="input" placeholder="Search products..."></input>
             <button type="submit"><FiSearch/></button>
             </div>
         </div>
