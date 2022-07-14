@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Banner from '../components/banner/Banner';
 import Footer from '../components/footer/Footer';
-import Test from '../assets/fashion-recent-products-01-1-1.jpg'
 import "./Heart.css"
+import ProductRow from '../components/products/productRow';
 
 const Heart = () => {
     const [count, setCount] = useState(1);
@@ -28,17 +28,7 @@ const Heart = () => {
                     <th>QUANTITY</th>
                     <th>TOTAL</th>
                     <th>Add</th>
-                <tr><td>
-                    <div className='img-table'><img src={Test} alt="" /></div>
-                    </td>
-                    <td>hello</td>
-                    <td>59$</td>
-                    <td><button onClick={()=>decrease()}> - </button>
-                        <input type="text" value={count} />
-                        <button onClick={()=>increase()}> + </button></td>
-                    <td>59$</td>
-                    <td><button>add</button></td>
-                    </tr>
+                <ProductRow increase={increase} decrease={decrease} count={count}/>
                 </table>
                 
                 <div className='table-big-btn'>

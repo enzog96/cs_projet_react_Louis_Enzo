@@ -3,6 +3,8 @@ import { AiOutlineHeart } from 'react-icons/ai';
 
 export default function ProductCard(props){
     const [isHovered, setHover] = useState(false);
+    function addtofavorites(){      
+    }
                 return(<div className="product-item-with-text">
                             <div className="product-item-bg-pic" key={props.id} onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)} style={{
                                 backgroundImage: "url(" + props.img + ")",backgroundPosition: 'center',
@@ -19,7 +21,7 @@ export default function ProductCard(props){
                                 </button>
                                 )}
                                 {isHovered && (
-                                    <AiOutlineHeart size={35} className='hearthover'/>
+                                    <AiOutlineHeart onClick={()=>addtofavorites() } size={35} className='hearthover'/>
                                 )}  
                             </div>  
                             <div>

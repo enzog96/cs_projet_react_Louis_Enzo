@@ -19,14 +19,6 @@ export const data = [
     {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids", inbasket: true, infavorites: false},
 ]
 
-let dataInbasket = []
-for (var i = 0; i < data.length; i++){
-    if(data[i].inbasket === true){
-        dataInbasket.push(data[i])
-    }
-}
-
-console.log(dataInbasket)
 
 let numberOfSales = 0;
 
@@ -56,7 +48,7 @@ export default function ProductItem (props){
                 
                 :data.map((product) => (
                     <>
-                    <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
+                    <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category} />
                     </>
                 ))}
                 </div>
