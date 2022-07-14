@@ -11,8 +11,6 @@ export default function Productpage() {
     const [filter, setFilter] = useState('');
     const [searchTerm, setSearchTerm] = useState("");
     
-
-
     function handlefilter(x){
         setFilter(x)
     }
