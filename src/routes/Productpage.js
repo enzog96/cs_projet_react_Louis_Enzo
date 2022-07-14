@@ -9,19 +9,21 @@ import ProductFilters from "../components/products/productfilters.js";
 
 export default function Productpage() {
     const [filter, setFilter] = useState('');
+    const [searchTerm, setSearchTerm] = useState("");
     
     function handlefilter(x){
         setFilter(x)
     }
+
     return(
     <>
     <div className="product-container">
         <Navbar/>
         <Banner title="Products" subtitle="New Arrivals Women Collection" />
     <div className='product-gallery-container'>
-        <ProductFilters filter={filter} handlefilter={handlefilter}/>
+        <ProductFilters filter={filter} handlefilter={handlefilter} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
         <div className="col-2">
-        <ProductItem filter={filter}/></div>
+        <ProductItem filter={filter} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/></div>
         </div>
     </div>
     <Footer/>
