@@ -97,9 +97,11 @@
     top: 100%;
     border-top: 5px solid gray;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 3vh;
 }
+a{text-decoration: none;
+color: black;}
 
 .cart-btn {
     width: 20vh;
@@ -109,6 +111,23 @@
     cursor: pointer;
     color: #fff;
     background-color: #000;
+}
+
+.row-inbasket{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none !important;
+}
+
+.cell-inbasket img{
+    margin-left: 0;
+    margin: auto;
+
+}
+
+.navbar td{
+    width: 40%
 }
 
 @media screen and (max-width: 740px) {
@@ -123,6 +142,9 @@
 
     .navbar .active{
         left: 0;
+    }
+    .navbar td{
+        width: 100%;
     }
 
     .hamburger {

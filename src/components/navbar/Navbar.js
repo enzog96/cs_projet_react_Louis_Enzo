@@ -62,7 +62,7 @@ const Navbar = () => {
                                 <tr className="row-inbasket">
                                     <td className="cell-inbasket"><img style={{maxWidth: "50%"}}src={product.img} alt="" /></td>
                                     <td className="cell-inbasket"><p>{product.name}</p></td>
-                                    <td className="cell-inbasket"><p>{product.quantity} X {product.price}</p></td>
+                                    <td className="cell-inbasket"><p>1 X {product.price}$</p></td>
                                 </tr>
                         ))}
                         </tbody>
