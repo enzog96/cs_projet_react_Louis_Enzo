@@ -8,10 +8,7 @@ export default function ProductCard(props){
     const [isHovered, setHover] = useState(false);
                 return(<div className="product-item-with-text">
                             <div className="product-item-bg-pic" key={props.id} onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)} style={{
-                                backgroundImage: "url(" + props.img + ")",backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat', 
-                                height: "500px", maxWidth: "400px", 
+                                backgroundImage: "url(" + props.img + ")"
                                 }}>
                             
                             {props.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
