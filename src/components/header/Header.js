@@ -15,7 +15,7 @@ const Header = () => {
                     <div className='header-text'>
                         <h1>LEATHER BAGS</h1>
                         <p>New Collection</p>
-                        <button>SHOP NOW</button>
+                        <a href="/product"><button>SHOP NOW</button></a>
                     </div>  
                 </SwiperSlide>
                 <SwiperSlide>
@@ -23,7 +23,7 @@ const Header = () => {
                     <div className='header-text'>
                         <h1>LEATHER BAGS</h1>
                         <p>New Collection</p>
-                        <button>SHOP NOW</button>
+                        <a href="/product"><button>SHOP NOW</button></a>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -31,7 +31,7 @@ const Header = () => {
                     <div className='header-text'>
                         <h1>LEATHER BAGS</h1>
                         <p>New Collection</p>
-                        <button>SHOP NOW</button>
+                        <a href="/product"><button>SHOP NOW</button></a>
                     </div>
                 </SwiperSlide>
             </Swiper>     
