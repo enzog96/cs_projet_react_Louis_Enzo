@@ -4,6 +4,7 @@ import Banner from '../components/banner/Banner';
 import Footer from '../components/footer/Footer';
 import "./Heart.css"
 import { infavoriteslist } from "../components/products/productCard"
+import { inbasketlist } from '../components/products/productCard';
 
 const Heart = () => {
     // const [count, setCount] = useState(1);
@@ -39,7 +40,7 @@ const Heart = () => {
                                 <td>{product.price}</td>
                                 <td><button >-</button>{product.quantity}<button>+</button></td>
                                 <td>{product.price * product.quantity}$</td>
-                                <td><button>ADD</button></td>
+                                <td><button onClick={() => inbasketlist.push(product)}>ADD</button></td>
                             </tr>
                         ))}
                     </tbody>

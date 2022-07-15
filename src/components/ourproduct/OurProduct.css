@@ -56,10 +56,7 @@
     cursor: pointer;
 }
 
-.smalltab-p {
-    display: flex;
-    gap: 1vh;
-}
+
 
 @media screen and (max-width: 740px) {
     .tab1 {
