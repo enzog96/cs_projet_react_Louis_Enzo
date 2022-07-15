@@ -60,15 +60,21 @@
 }
 
 @media screen and (max-width: 750px) {
-    tbody, thead { float: left; }
-    thead { min-width: 120px }
+    tbody, thead { float: left; 
+    }
+    thead { min-width: 120px 
+    }
     td { display: block;
         margin: auto; }
     tbody img{
         max-width: 100%;
     }
-    th { display: none }
+    th { display: none 
+    }
     .favorites-table td {
         width: 100%;
+    }
+    .table-big-btn{
+        justify-content: center;
     }
 }
