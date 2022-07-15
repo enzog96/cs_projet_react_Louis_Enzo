@@ -5,6 +5,7 @@ import Logo from '../../assets/logo.png'
 import { BsBag} from 'react-icons/bs'
 import {AiOutlineHeart} from 'react-icons/ai'
 import { FaBars, FaTimes} from 'react-icons/fa'
+import { inbasketlist } from '../products/productCard';
 
 
 const Navbar = () => {
@@ -55,6 +56,17 @@ const Navbar = () => {
             {open && (
                 <div className="container-cart">
                     <NavLink to='/basket'>
+                        {inbasketlist.map((product)=>(
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td><img style={{width: "25%"}}src={product.img} alt="" /></td>
+                                    <td><p>{product.name}</p></td>
+                                    <td><p>{product.quantity} X {product.price}</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        ))}
                         <button className='cart-btn'>VIEW BASKET</button>
                     </NavLink>
                 </div>

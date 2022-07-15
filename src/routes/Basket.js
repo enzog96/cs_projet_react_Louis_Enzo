@@ -28,7 +28,6 @@ const Basket = () => {
                         <th>PRICE</th>
                         <th>QUANTITY</th>
                         <th>TOTAL</th>
-                        <th>Add</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,7 +38,6 @@ const Basket = () => {
                                 
                                 <td><button onClick={()=>decrease()}>-</button>{count}<button onClick={()=>increase()}>+</button></td>
                                 <td>{product.price * count}$</td>
-                                <button>ADD</button>
                             </tr>
                         ))}
                     </tbody>
