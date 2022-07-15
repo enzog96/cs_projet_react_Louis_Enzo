@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { AiOutlineHeart } from 'react-icons/ai';
 
+export let infavoriteslist = [];
+export let inbasketlist = [];
+
 export default function ProductCard(props){
     const [isHovered, setHover] = useState(false);
                 return(<div className="product-item-with-text">
@@ -14,12 +17,12 @@ export default function ProductCard(props){
                             {props.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
                             {props.new===true?<div className='new-green-pill'>New</div>: ""}
                                 {isHovered && (
-                                <button className="btnhover">
+                                <button className="btnhover" onClick={()=>inbasketlist.push(props)}>
                                 ADD TO CART 
                                 </button>
                                 )}
                                 {isHovered && (
-                                    <AiOutlineHeart onClick={()=>props.addtofavorites()} size={35} className='hearthover'/>
+                                    <AiOutlineHeart onClick={()=>infavoriteslist.push(props)} size={35} className='hearthover'/>
                                 )}  
                             </div>  
                             <div>

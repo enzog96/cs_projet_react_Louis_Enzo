@@ -3,7 +3,7 @@ import Navbar from '../components/navbar/Navbar';
 import Banner from '../components/banner/Banner';
 import Footer from '../components/footer/Footer';
 import "./Heart.css"
-import ProductRow from '../components/products/productRow';
+import { infavoriteslist } from "../components/products/productCard"
 
 const Heart = () => {
     const [count, setCount] = useState(1);
@@ -33,7 +33,16 @@ const Heart = () => {
                     </tr>
                     </thead>
                     <tbody>
-                        <ProductRow increase={increase} decrease={decrease} count={count}/>
+                        {infavoriteslist.map((product, i) => (
+                            <tr><td><img src={product.img} alt=""/></td>
+                                <td>{product.name}</td>
+                                <td>{product.price}</td>
+                                
+                                <td><button onClick={()=>decrease()}>-</button>{count}<button onClick={()=>increase()}>+</button></td>
+                                <td>{product.price * count}$</td>
+                                <button>ADD</button>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
                 

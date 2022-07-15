@@ -19,13 +19,6 @@ export const data = [
     {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids", inbasket: true, infavorites: true},
 ]
 
-let productsinfavorites = []
-
-for(let i = 0; i < data.length;i++){
-    if(data[i].infavorites === true){
-    productsinfavorites.push(data[i])
-}}
-
 
 let numberOfSales = 0;
 
