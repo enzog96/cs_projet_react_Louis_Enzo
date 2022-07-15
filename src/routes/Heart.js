@@ -4,7 +4,11 @@ import Banner from '../components/banner/Banner';
 import Footer from '../components/footer/Footer';
 import "./Heart.css"
 import { infavoriteslist } from "../components/products/productCard"
+<<<<<<< HEAD
 import Buttonquantity from '../components/products/buttonquantity';
+=======
+import { inbasketlist } from '../components/products/productCard';
+>>>>>>> enzo
 
 const Heart = () => {
     // const [count, setCount] = useState(1);

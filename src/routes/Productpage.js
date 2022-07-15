@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer";
 import ProductFilters from "../components/products/productfilters.js";
 import Sold from "../components/sold/Sold"
 
-
+import '../components/products/productItem.css'
 
 export default function Productpage() {
     const [filter, setFilter] = useState('');
