@@ -16,12 +16,15 @@ export default function ProductCard(props){
         }
     function handlepushfav(y){
         if(infavoriteslist.includes(y)){
-            console.log("already in basket")
+            console.log("already in fav")
         }else{
-            console.log("pushed in basket")
+            console.log("pushed in fav")
             infavoriteslist.push(y)
-            }
         }
+        setIsActive(true);
+        }
+    const [isActive, setIsActive] = useState(false);
+
             return(<div className="product-item-with-text">
                             <div className="product-item-bg-pic" key={props.id} onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)} style={{
                                 backgroundImage: "url(" + props.img + ")"
@@ -35,7 +38,7 @@ export default function ProductCard(props){
                                 </button>
                                 )}
                                 {isHovered && (
-                                    <AiOutlineHeart onClick={()=>handlepushfav(props)} size={35} className='hearthover'/>
+                                    <AiOutlineHeart onClick={()=>handlepushfav(props)} size={35} style={{color: isActive ? "red" : " "}} className='hearthover'/>
                                 )}  
                             </div>  
                             <div>

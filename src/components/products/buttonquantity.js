@@ -3,13 +3,17 @@ import React, {useState} from 'react'
 
 export default function Buttonquantity(props) {
     let [count, setCount] = useState(1);
-    function increase(){
+    function decrease(){
       if(count > 0)
       setCount(count-=1)
     }
+
+    function increase(){
+      setCount(count+=1)
+    }
   return (
     <>
-    <td><button onClick={()=>increase()}>-</button><input value={count}></input><button onClick={()=>setCount(count+=1)}>+</button></td>
+    <td><button onClick={()=>decrease()}>-</button><input value={count}></input><button onClick={()=>increase()}>+</button></td>
     <td className="totalprice">{props.product.price*count}$</td>
     </>
   )
