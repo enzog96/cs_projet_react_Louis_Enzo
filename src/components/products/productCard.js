@@ -6,7 +6,23 @@ export let inbasketlist = [];
 
 export default function ProductCard(props){
     const [isHovered, setHover] = useState(false);
-                return(<div className="product-item-with-text">
+    function handlepush(x){
+       if(inbasketlist.includes(x)){
+        console.log("already in basket")
+       }else{
+        console.log("pushed in basket")
+        inbasketlist.push(x)
+            }
+        }
+    function handlepushfav(y){
+        if(infavoriteslist.includes(y)){
+            console.log("already in basket")
+        }else{
+            console.log("pushed in basket")
+            infavoriteslist.push(y)
+            }
+        }
+            return(<div className="product-item-with-text">
                             <div className="product-item-bg-pic" key={props.id} onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)} style={{
                                 backgroundImage: "url(" + props.img + ")"
                                 }}>
@@ -14,12 +30,12 @@ export default function ProductCard(props){
                             {props.sale===true?<div className='sale-red-pill'>Sale</div>: ""}
                             {props.new===true?<div className='new-green-pill'>New</div>: ""}
                                 {isHovered && (
-                                <button className="btnhover" onClick={()=>inbasketlist.push(props)}>
+                                <button className="btnhover" onClick={()=>handlepush(props)}>
                                 ADD TO CART 
                                 </button>
                                 )}
                                 {isHovered && (
-                                    <AiOutlineHeart onClick={()=>infavoriteslist.push(props)} size={35} className='hearthover'/>
+                                    <AiOutlineHeart onClick={()=>handlepushfav(props)} size={35} className='hearthover'/>
                                 )}  
                             </div>  
                             <div>

@@ -59,12 +59,10 @@ const Navbar = () => {
                     <table>
                         <tbody>
                         {inbasketlist.map((product)=>(
-                            
-                                
-                                <tr>
-                                    <td><img style={{maxWidth: "50%"}}src={product.img} alt="" /></td>
-                                    <td><p>{product.name}</p></td>
-                                    <td><p>{product.quantity} X {product.price}</p></td>
+                                <tr className="row-inbasket">
+                                    <td className="cell-inbasket"><img style={{maxWidth: "50%"}}src={product.img} alt="" /></td>
+                                    <td className="cell-inbasket"><p>{product.name}</p></td>
+                                    <td className="cell-inbasket"><p>{product.quantity} X {product.price}</p></td>
                                 </tr>
                         ))}
                         </tbody>
