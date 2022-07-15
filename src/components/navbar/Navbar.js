@@ -56,17 +56,19 @@ const Navbar = () => {
             {open && (
                 <div className="container-cart">
                     <NavLink to='/basket'>
+                    <table>
+                        <tbody>
                         {inbasketlist.map((product)=>(
-                            <table>
-                                <tbody>
+                            
+                                
                                 <tr>
-                                    <td><img style={{width: "25%"}}src={product.img} alt="" /></td>
+                                    <td><img style={{maxWidth: "50%"}}src={product.img} alt="" /></td>
                                     <td><p>{product.name}</p></td>
                                     <td><p>{product.quantity} X {product.price}</p></td>
                                 </tr>
-                                </tbody>
-                            </table>
                         ))}
+                        </tbody>
+                    </table>
                         <button className='cart-btn'>VIEW BASKET</button>
                     </NavLink>
                 </div>
