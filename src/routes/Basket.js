@@ -3,19 +3,10 @@ import Navbar from '../components/navbar/Navbar';
 import Banner from '../components/banner/Banner';
 import Footer from '../components/footer/Footer';
 import { inbasketlist } from '../components/products/productCard';
+import Buttonquantity from '../components/products/buttonquantity';
 
 const Basket = () => {
     const [count, setCount] = useState(1);
-
-    function increase() {
-        if(count < 10){
-      setCount(count + 1);}
-    }
-
-    function decrease() {
-        if(count > 0){
-        setCount(count - 1);}
-    }
     return (
         <div>
             <Navbar/>
@@ -31,13 +22,12 @@ const Basket = () => {
                     </tr>
                     </thead>
                     <tbody>
-                        {inbasketlist.map((product, i) => (
+                        {inbasketlist.map((product) => (
                             <tr><td><img src={product.img} alt=""/></td>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
-                                
-                                <td><button onClick={()=>decrease()}>-</button>{count}<button onClick={()=>increase()}>+</button></td>
-                                <td>{product.price * count}$</td>
+                                <td><Buttonquantity props={product} count={count}/></td>
+                                <td>total = {product.price * count}</td>
                             </tr>
                         ))}
                     </tbody>
