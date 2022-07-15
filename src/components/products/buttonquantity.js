@@ -6,7 +6,7 @@ export default function Buttonquantity(props) {
   return (
     <>
     <td><button onClick={()=>setCount(count-=1)}>-</button><input value={count}></input><button onClick={()=>setCount(count+=1)}>+</button></td>
-    <td>{props.product.price*count}</td>
+    <td>{props.product.price*count}$</td>
     </>
   )
 }

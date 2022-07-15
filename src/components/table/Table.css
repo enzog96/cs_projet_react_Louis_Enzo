@@ -66,22 +66,6 @@
     margin-left: 10vh;
 }
 
-.table-big-btn {
-    display: flex;
-    justify-content: end;
-    border: 1px solid rgb(126, 126, 126);
-    padding: 4vh;
-}
-
-.table-big-btn button {
-    color: #fff;
-    background: #000;
-    width: 17vh;
-    height: 5vh;
-    border-radius: 5vh;
-    cursor: pointer;
-}
-
 @media screen and (max-width: 740px) {
     .table-div {
         grid-template-columns: 100%;
