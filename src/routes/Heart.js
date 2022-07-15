@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Banner from '../components/banner/Banner';
 import Footer from '../components/footer/Footer';
@@ -7,17 +7,6 @@ import { infavoriteslist } from "../components/products/productCard"
 import Buttonquantity from '../components/products/buttonquantity';
 
 const Heart = () => {
-    // const [count, setCount] = useState(1);
-
-    // function increase() {
-    //     if(count < 10){
-    //   setCount(count + 1);}
-    // }
-
-    // function decrease() {
-    //     if(count > 0){
-    //     setCount(count - 1);}
-    // }
     return (
         <div>
             <Navbar/>
@@ -39,8 +28,8 @@ const Heart = () => {
                                 <td>{product.name}</td>
                                 <td>{product.price}$</td>
                                 <Buttonquantity product={product}/>
-                                <td><button>ADD</button></td>
-                            </tr>
+                                <td><button className='button-add-heart'>ADD</button></td>
+                            </tr>                           
                         ))}
                     </tbody>
                 </table>

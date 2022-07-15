@@ -30,6 +30,9 @@ const Basket = () => {
                         ))}
                     </tbody>
                 </table>
+                <div className='table-big-btn'>
+                    <button>PROCEED TO PAYMENT</button>
+                </div>
             <Footer/>
         </div>
     );

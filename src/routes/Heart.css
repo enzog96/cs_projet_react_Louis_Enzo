@@ -9,13 +9,20 @@
     display: flex;
     justify-content: end;
     border: 1px solid rgb(126, 126, 126);
-    padding: 4vh;
+    padding: 5vh
 }
 
-.table-big-btn button {
+.table-big-btn button{
     color: #fff;
     background: #000;
-    padding: 1vh;
+    padding: 2vh;
+    border-radius: 5vh;
+    cursor: pointer;
+}
+
+.button-add-heart {
+    color: #fff;
+    background: #000;
     border-radius: 5vh;
     cursor: pointer;
 }
