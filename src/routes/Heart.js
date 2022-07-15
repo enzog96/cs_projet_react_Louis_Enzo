@@ -4,6 +4,7 @@ import Banner from '../components/banner/Banner';
 import Footer from '../components/footer/Footer';
 import "./Heart.css"
 import { infavoriteslist } from "../components/products/productCard"
+import Buttonquantity from '../components/products/buttonquantity';
 
 const Heart = () => {
     // const [count, setCount] = useState(1);
@@ -36,9 +37,8 @@ const Heart = () => {
                         {infavoriteslist.map((product) => (
                             <tr><td><img src={product.img} alt=""/></td>
                                 <td>{product.name}</td>
-                                <td>{product.price}</td>
-                                <td><button >-</button>{product.quantity}<button>+</button></td>
-                                <td>{product.price * product.quantity}$</td>
+                                <td>{product.price}$</td>
+                                <Buttonquantity product={product}/>
                                 <td><button>ADD</button></td>
                             </tr>
                         ))}

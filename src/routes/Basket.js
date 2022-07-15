@@ -6,7 +6,6 @@ import { inbasketlist } from '../components/products/productCard';
 import Buttonquantity from '../components/products/buttonquantity';
 
 const Basket = () => {
-    const [count, setCount] = useState(1);
     return (
         <div>
             <Navbar/>
@@ -25,9 +24,8 @@ const Basket = () => {
                         {inbasketlist.map((product) => (
                             <tr><td><img src={product.img} alt=""/></td>
                                 <td>{product.name}</td>
-                                <td>{product.price}</td>
-                                <td><Buttonquantity props={product} count={count}/></td>
-                                <td>total = {product.price * count}</td>
+                                <td>{product.price}$</td>
+                                <Buttonquantity product={product}/>
                             </tr>
                         ))}
                     </tbody>
