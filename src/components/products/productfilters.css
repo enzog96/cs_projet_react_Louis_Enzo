@@ -1,5 +1,5 @@
 .productfilters {
-    width: 30%;
+    width: 25%;
     cursor: pointer;
 }
 
@@ -41,3 +41,16 @@
 .fg--search input:focus+button .fa-search {
     color: red;
 }
+
+@media screen and (max-width: 740px) {
+    .productfilters {
+        margin-left: 9vh;
+    }  
+}
+
+@media screen and (max-width: 368px) {
+    .productfilters {
+        margin-left: 15vh;
+    } 
+}
+

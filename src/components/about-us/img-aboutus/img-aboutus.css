@@ -6,5 +6,24 @@
 @media screen and (max-width: 740px) {
     .aboutImage img {
         width: 100%;
+    } 
+}
+
+@media screen and (max-width: 368px) {
+    .aboutImage img {
+        width: 100%;
+    }
+    .aboutImage {
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .aboutImage img {
+        width: 100%;
+    }
+    .aboutImage {
+        padding: 0;
     }
 }

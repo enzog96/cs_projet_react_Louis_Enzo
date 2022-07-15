@@ -59,9 +59,35 @@
         justify-items: center;
         margin: auto;
         width: 100%;  
-        height: fit-content;   
-        
+        height: fit-content;      
+    }
+}
+
+@media screen and (max-width: 368px) {
+    .coming {
+        width: 30vh;
+        height: 30vh;
     }
 
-  
+    .coming button {
+        position: relative;
+        top: 80%;
+        left: 17%;
+        width: 20vh;
+        height: 5vh;
+        border: none;
+        background-color: #fff;
+    }
+}
+
+
+@media screen and (max-width: 768px)  {
+    .coming button {
+        position: relative;
+        top: 80%;
+        width: 20vh;
+        height: 5vh;
+        border: none;
+        background-color: #fff;
+    }
 }
