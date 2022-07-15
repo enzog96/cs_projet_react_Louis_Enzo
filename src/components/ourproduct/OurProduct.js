@@ -21,7 +21,7 @@ const OurProduct = () => {
         <TabPanel>
           <div className='tab1'>
               {data.slice(0, 4).map((product) =>
-              <div>
+              <div key={product.id}>
                   <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
               </div>)}       
           </div> 
@@ -29,7 +29,7 @@ const OurProduct = () => {
         <TabPanel>
           <div className='tab1'>
               {data.filter(data => data.new === true).map((product) => 
-              <div>
+              <div key={product.id}>
               <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
           </div>
               )}            
@@ -38,7 +38,7 @@ const OurProduct = () => {
         <TabPanel>
           <div className='tab1'>
               {data.filter(data => data.sale === true).map((product) =>
-              <div>
+              <div key={product.id}>
                 <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
               </div>
               )}            
@@ -47,7 +47,7 @@ const OurProduct = () => {
         <TabPanel>
           <div className='tab1'>
               {data.slice(0, 7).filter(data => data.sale === false ).filter(data => data.new === false).map((product) =>
-              <div>
+              <div key={product.id}>
               <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
               </div>
               )}            

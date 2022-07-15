@@ -7,7 +7,7 @@
 
  .table-big-btn {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     border: 1px solid rgb(126, 126, 126);
     padding: 5vh
 }
@@ -25,10 +25,21 @@
     background: #000;
     border-radius: 5vh;
     cursor: pointer;
+    width: 60% !important;
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display:block;
+    
 }
 
+.td-button-heart{
+    width: 100%;
+}
+
+
 .favorites-table img{
-    width: 30%;
+    width: 60%;
 }
 
 .favorites-table td{
@@ -49,17 +60,17 @@
 }
 
 .favorites-table input {
-    width: 5vh;
+    width: 3vh;
     text-align: center;
-    height: 5vh;
+    height: 3vh;
 }
 .favorites-table button {
-    width: 5vh;
-    height: 5vh;
+    width: 3vh;
+    height: 3vh;
     cursor: pointer;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 769px) {
     tbody, thead { float: left; 
     }
     thead { min-width: 120px 
@@ -76,5 +87,8 @@
     }
     .table-big-btn{
         justify-content: center;
+    }
+    .totalprice::before{
+        content:'total for this item: '
     }
 }

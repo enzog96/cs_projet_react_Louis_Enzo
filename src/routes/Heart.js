@@ -20,24 +20,20 @@ const Heart = () => {
                         <th>PRICE</th>
                         <th>QUANTITY</th>
                         <th>TOTAL</th>
-                        <th>Add</th>
+                        <th>ADD</th>
                     </tr>
                     </thead>
                     <tbody>
                         {infavoriteslist.map((product) => (
-                            <tr><td><img src={product.img} alt=""/></td>
+                            <tr key={product.id}><td><img src={product.img} alt=""/></td>
                                 <td>{product.name}</td>
                                 <td>{product.price}$</td>
                                 <Buttonquantity product={product}/>
-                                <td><button className='button-add-heart' onClick={()=>inbasketlist.push(product)}>ADD</button></td>
+                                <td className="td-button-heart"><button className='button-add-heart' onClick={()=>inbasketlist.push(product)}>ADD</button></td>
                             </tr>                           
                         ))}
                     </tbody>
                 </table>
-                
-                <div className='table-big-btn'>
-                    <button>PROCEED TO PAYMENT</button>
-                </div>
             <Footer/>
         </div>
     );
