@@ -8,3 +8,9 @@
         width: 100% !important;
     }
 }
+
+@media screen and (max-width: 368px) {
+    .maps {
+        width: 100%  !important;
+    }
+}

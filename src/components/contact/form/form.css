@@ -47,3 +47,36 @@
         align-items: center;
     }
 }
+
+@media screen and (max-width: 368px) {
+    .form-contact {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .container-contact {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-contact {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .container-contact {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+
+    }
+}
+
