@@ -15,9 +15,16 @@ export const data = [
     {id: 5, name: "ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Accessories", inbasket: false, infavorites: false}, 
     {id: 6, name: "lorem", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Women", inbasket: false, infavorites: false},
     {id: 7, name: "dkim", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids", inbasket: false, infavorites: false}, 
-    {id: 8, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids", inbasket: false, infavorites: false},
-    {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids", inbasket: true, infavorites: false},
+    {id: 8, name: "lorem ipsum", price: 75.00, img: test, new: false, sale: false, newprice: "", category: "Kids", inbasket: false, infavorites: true},
+    {id: 9, name: "lorem ipsum", price: 75.00, img: test, new: true, sale: false, newprice: "", category: "Kids", inbasket: true, infavorites: true},
 ]
+
+let productsinfavorites = []
+
+for(let i = 0; i < data.length;i++){
+    if(data[i].infavorites === true){
+    productsinfavorites.push(data[i])
+}}
 
 
 let numberOfSales = 0;
@@ -29,7 +36,9 @@ for (let index = 0; index < data.length; index++) {
 }
 export let PassNumber = numberOfSales;
 export default function ProductItem (props){
-    
+    function addtofavorites(){
+        data.infavorites = true;      
+    }
         return(
             <div>
                     <p className="number-products">Number of products : {data.length}</p>
@@ -37,18 +46,18 @@ export default function ProductItem (props){
                     
                 {props.filter !== "" ? data.filter(data => data.category === props.filter).map((product) => (
                     <>
-                    <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
+                    <ProductCard addtofavorites={addtofavorites} id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
                     </>
                 ))
                 :props.searchTerm !== "" ? data.filter(data1 => data1.name.includes(props.searchTerm)).map(product => (
                     <>
-                    <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
+                    <ProductCard addtofavorites={addtofavorites} id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category}/>
                     </>
                   ))
                 
                 :data.map((product) => (
                     <>
-                    <ProductCard id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category} />
+                    <ProductCard addtofavorites={addtofavorites} id={product.id} name={product.name} price={product.price} img={product.img} new={product.new} sale={product.sale} newprice={product.newprice} category={product.category} />
                     </>
                 ))}
                 </div>

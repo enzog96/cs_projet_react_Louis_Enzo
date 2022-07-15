@@ -5,7 +5,7 @@ export default function ProductRow(props) {
   return (
     <>
     {data.filter(data => data.infavorites === true).map((product=>
-    <tr>
+    <tr key={product.id}>
         <td><div className='img-table'><img src={product.img} alt=""></img></div></td>
         <td>{product.name}</td>
         <td>{product.price}</td>

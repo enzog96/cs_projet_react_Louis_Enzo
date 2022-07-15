@@ -22,13 +22,19 @@ const Heart = () => {
             <Navbar/>
             <Banner title="Favorites" />
                 <table className='favorites-table'>
-                    <th></th>
-                    <th>PRODUCT</th>
-                    <th>PRICE</th>
-                    <th>QUANTITY</th>
-                    <th>TOTAL</th>
-                    <th>Add</th>
-                <ProductRow increase={increase} decrease={decrease} count={count}/>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>PRODUCT</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>TOTAL</th>
+                        <th>Add</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <ProductRow increase={increase} decrease={decrease} count={count}/>
+                    </tbody>
                 </table>
                 
                 <div className='table-big-btn'>
