@@ -69,3 +69,44 @@
         height: fit-content;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .tab1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 3vh;
+    }
+
+    .product {
+        margin-bottom: 15vh;
+        height: 75vh;
+    }
+
+    .main-tab {
+        display: flex;
+        border: none;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 368px) {
+    .tab1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+        gap: 3vh;
+    }
+
+    .product {
+        margin-bottom: 15vh;
+        height: 150vh;
+    }
+
+    .main-tab {
+        display: flex;
+        border: none;
+        justify-content: center;
+    }
+}
+

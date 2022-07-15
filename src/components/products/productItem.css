@@ -1,5 +1,5 @@
 .col-2{
-    width: 60%;
+    width: 65%;
 }
 
 .product-gallery-container{
@@ -30,8 +30,9 @@
 
 .number-products{
     margin-top: 5vh;
+    margin-bottom: 5vh;
     text-align: end;
-    width: 85%;
+    width: 95%;
 }
 
 .sale-red-pill{
@@ -101,16 +102,75 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 740px) {
-    .product-gallery {
-        grid-template-columns: 1fr;
-        margin-top: 0 ;
-        margin-bottom: 0;
-        padding: 0;
+@media screen and (max-width: 768px) {
+    .col-2 {
+        height: 125vh ;
+        margin: auto;
+        margin-top: 60vh;
         
     }
-    
-    
-    
+    .product-gallery-container {
+        display: grid;
+        grid-template-columns: 1fr ;
+        justify-content: center;
+    }
 
+    .product-item-with-text {
+        margin-left: 1vh; 
+        width: 20vh;
+    }
+    .product-item-with-text p{
+        text-align: center; 
+    }
+    .product-prices-flex-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-gallery {
+        grid-template-columns: 1fr 1fr;
+        height: 30vh;
+        margin-left: 10vh;
+    }
+    .number-products {
+        display: none;
+    }
 }
+
+
+@media screen and (max-width: 368px) {
+    .col-2 {
+        height: 125vh ;
+        margin-top: 175vh !important;
+        margin-bottom: 100vh;
+        display: grid;
+        justify-content: center;
+        
+    }
+    .product-gallery-container {
+        display: grid;
+        grid-template-columns: 1fr ;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .product-item-with-text p{
+        text-align: center; 
+    }
+
+    .product-prices-flex-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-gallery {
+        grid-template-columns: 1fr;
+        margin-right: 10vh;
+    }
+    .number-products {
+        display: none;
+    }
+}
+
+

@@ -1,5 +1,6 @@
 .aboutCol{
     display: flex;
+    flex-wrap: wrap;
     padding: 5vh;
 }
 
@@ -12,3 +13,4 @@
     padding-left: 5vh;
     margin-top: 5vh;
 }
+
