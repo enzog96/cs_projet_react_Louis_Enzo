@@ -17,6 +17,7 @@
     grid-template-columns: 1fr 1fr 1fr;  
     margin-top: 5vh;
     margin-bottom: 15vh;
+    width: 80%;
 }
 
 .image-product{
@@ -62,6 +63,11 @@
 }
 .product-item-bg-pic{
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    max-width: 250px;
 }
 .btnhover {
     background-color: black;
@@ -72,7 +78,6 @@
     cursor: pointer;
     position: absolute;
     bottom: 5%;
-    left: calc(37%);
 }
 
 .hearthover {
